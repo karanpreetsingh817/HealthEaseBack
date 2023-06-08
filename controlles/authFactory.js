@@ -20,6 +20,7 @@ const sendToken = (res, user) => {
         res.cookie("role", "doc-profile", {
             httpOnly: false,
             sameSite: false,
+         
     
         })
         

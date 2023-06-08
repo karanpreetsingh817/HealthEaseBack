@@ -111,7 +111,7 @@ exports.getAllAppointments = catchAsync(async (req, res, next) => {
             status: "successfull",
             statusCode: 200,
             message: "oh ho! there is no appintment for today",
-            result: "none"
+            result: []
         });
     }
     res.status(200).json({

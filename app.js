@@ -14,6 +14,7 @@ const cors = require("cors")
 const cookieParser = require("cookie-parser");
 const session = require('express-session');
 
+
 dotenv.config({ path: './config.env' });
 
 const app = express();
@@ -24,7 +25,7 @@ app.use(session({
     resave: true,
     saveUninitialized: true,
     cookie: {
-        httpOnly: true 
+        httpOnly: false 
     }
 }))
 
@@ -114,3 +115,4 @@ app.use(globalErrorHandler);
 app.listen(port, (req, res) => {
     console.log(`server is listening on port ${port}`);
 });
+
